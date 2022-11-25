@@ -6,6 +6,7 @@ module.exports = {
   mode: "development",
   entry: {
     index: "./src/index.js",
+  
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -16,9 +17,14 @@ module.exports = {
   ],
   devtool: "inline-source-map",
   output: {
-    filename: "main.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   module: {
     rules: [
