@@ -50,5 +50,6 @@ function switchTabRight()
 function switchTab(tab)
 {
     const main = document.getElementById("main-container");
-    main.replaceChild(tab, main.childNodes[1]);
+    let oldTab = main.childNodes[1];
+    main.replaceChild(tab, oldTab);
 }
