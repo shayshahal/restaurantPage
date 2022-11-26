@@ -152,3 +152,50 @@ img
     font-size: 1.5em;
     font-weight: bold;
 }
+#tab2
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2em;
+}
+.menu-list
+{
+    display: flex;
+    width: auto ;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.03);
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2em;
+    padding: 2em;
+    border: 2px solid white;
+    border-radius: 1em;
+}
+.menu-item
+{
+    flex-grow: 1;
+    border: 1px solid white;
+    border-radius: 0.5em;
+    background-color: rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 1em;
+}
+.item-words
+{
+    display: flex;
+    flex-direction: column;
+}
+.item-name
+{
+    font-weight: bold;
+}
+.item-desc
+{
+    overflow-wrap: break-word;
+}
