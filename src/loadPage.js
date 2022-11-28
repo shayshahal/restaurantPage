@@ -1,6 +1,7 @@
 import logo from './assets/logo.png';
 import gitLogo from './assets/github-logo.png';
 import callTabLoad from './loadTab.js';
+import scroll from './assets/scroll.png';
 
 // Create content div
 const contentDiv = document.createElement("div"); 
@@ -13,6 +14,13 @@ export default function loadPage()
     createHeader(); // Header creation
     createMain(); // Main creation
     createFooter(); // Footer creation
+    
+    const scrollDiv = document.createElement("div");
+    const img = new Image();
+    img.src = scroll;
+    scrollDiv.appendChild(img);
+    scrollDiv.id = 'scroll-div';
+    contentDiv.appendChild(scrollDiv);
 }
 
 // Header creation function 
@@ -27,7 +35,6 @@ function createHeader()
     let resLogo = new Image();
     resLogo.id = 'logo';
     resLogo.src = logo; 
-    resLogo.classList.add('img');
     headerDiv.appendChild(resLogo);
 }
 
@@ -39,25 +46,11 @@ function createMain()
     mainDiv.id = 'main-container';
     contentDiv.appendChild(mainDiv);
 
-    // Create left button, disable him as we start with the tab farthest to the left
-    let leftBtn = document.createElement('button');
-    leftBtn.textContent = "<";
-    leftBtn.disabled = true;
-    leftBtn.id = "leftBtn";
-    leftBtn.classList.add('nav-btn');
-    mainDiv.appendChild(leftBtn);   
 
-    // Create right button
-    let rightBtn = document.createElement('button');
-    rightBtn.textContent = ">";
-    rightBtn.id = "rightBtn";
-    rightBtn.classList.add('nav-btn');
-    mainDiv.appendChild(rightBtn);
-
-    // Load tab when call is fulfilled, add it in the middle
+    // Load tab when call is fulfilled, add it
     callTabLoad(1).then((tab) => 
     {
-        mainDiv.insertBefore(tab, rightBtn);
+        mainDiv.appendChild(tab);
     });
 }
 
@@ -90,7 +83,6 @@ function createFooter()
     let gitImg = document.createElement('img')
     gitImg.src = gitLogo;
     gitImg.alt = 'github image';
-    gitImg.classList.add('img');
     gitLink.appendChild(gitImg);
 
 }

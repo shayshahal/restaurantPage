@@ -1,5 +1,6 @@
 import bg from './assets/Pizza.jpg';
 
+
 export default function loadTab(tab)
 {
     // Change background for tab
@@ -9,6 +10,7 @@ export default function loadTab(tab)
     // Create blur for background
     const main = document.getElementById("main-container");
     main.style.backdropFilter = 'blur(7px)';
+    
     
     // Tab attributes
     tab.id = "tab1";
