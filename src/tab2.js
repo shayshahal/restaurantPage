@@ -24,9 +24,9 @@ export default function loadTab(tab)
     title.classList.add('title');
     list.appendChild(title);
 
-    addItem(list, italian, "Italian:", "An italiano pizza", 10);
-    addItem(list, mx, "Mexican:", "A Mexicano pizza", 20);
-    addItem(list, ny, "New-Yorker:", "A New-Yorker pizza", 30);
+    addItem(list, italian, "Italian", "An italiano pizza", 10);
+    addItem(list, mx, "Mexican", "A Mexicano pizza", 20);
+    addItem(list, ny, "New-Yorker", "A New-Yorker pizza", 30);
 }
 
 function addItem(list, imageSrc, title, text, prc)

@@ -16,7 +16,7 @@ export default function loadTab(tab)
      tab.appendChild(hoursDiv);
 
      const hoursTitle = document.createElement('p');
-     hoursTitle.textContent = "Opening hours";
+     hoursTitle.textContent = "Opening hours:";
      hoursTitle.classList.add('title');
      hoursDiv.appendChild(hoursTitle);
 

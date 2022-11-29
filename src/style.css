@@ -13,7 +13,7 @@
     color: #FFF3E4;
     overflow: hidden;
     font-family: 'italian', fantasy;
-    text-shadow: 0px 5px 5px black;
+    text-shadow: 0 .5vh .5vh black;
 }
 html
 {
@@ -50,7 +50,7 @@ body
     justify-content: space-between;
     justify-items: center;
     background-color: #552c0a;
-    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px .3vh 1vh .1vh rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
 
@@ -104,7 +104,7 @@ input
     border-radius: 50%;
     background-color: transparent;
     flex-grow: 1;
-    border: 2px solid rgb(255, 255, 255);
+    border: .2vw solid rgb(255, 255, 255);
     transition: background-color .2s ease;
 }
 input:checked
@@ -145,14 +145,14 @@ input:checked
     padding: 0vh 1vw;
     background-color: #310606f3;
     z-index: 999;
-    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 .3vh 1vh .1vh rgba(0, 0, 0, 0.5);
 }
 #credits
 {
     display: flex;
     align-items: center;
     font-weight: bolder;
-
+    font-size: 2vh;
 }
 #github-link
 {
@@ -173,14 +173,13 @@ img
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-shadow: 2px 2px 2px black;
     align-items: center;
     text-align: center;
-    padding: 1em;
+    padding: 1vh;
 }
 #welcome
 {
-    font-size: 6em;
+    font-size: 12vh;
     width: 100%;
     font-weight: 900;
 }
@@ -189,9 +188,9 @@ img
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 0.2em;
+    gap: 3vh;
     align-items: center;
-    font-size: 4em;
+    font-size: 4vh;
     font-weight: bold;
 }
 #tab2
@@ -200,8 +199,7 @@ img
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1em;
-    gap: 1em;
+    padding: 1vw;
     
 }
 .menu-list
@@ -209,50 +207,55 @@ img
     height: 80%;
     width: 50%;
     display: flex;
-    background-color: rgb(53, 32, 0);
+    background-color: rgb(146, 103, 37);
     color: black;
     flex-direction: column;
-    align-items: stretch;
-    gap: 1em;
-    padding: 0.5em;
-    border: 10px solid #421616;
-    border-radius: 0.5em;
+    gap: 1vh;
+    padding: 0.5vw;
+    border: 1vh solid #421616;
+    border-radius: 3%;
 }
 .menu-item
 {
     flex: 1;
-    border: 1px solid white;
-    border-radius: 0.5em;
+    border: .1vh solid white;
+    border-radius: .5vh;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    padding: 0.3em;
+    justify-content: stretch;
+    gap: 0.1vw;
+
+    background-color: rgb(61, 26, 15);
 }
 .item-image-div
 {
-    height: 100%;
     border-radius: 50%;
+    height: 0;
+    width: 20%;
+    padding-bottom: 20%;
+    align-self: center;
     background-position: center;
     background-size: cover;
-    border: 7px solid #834e23;
-    flex: 1;
+    border: 0.4vw solid #834e23;
 }
 .item-words
 {
     display: flex;
-    flex: 4;
-    gap: 0.5em;
+    gap: 0.5vw;
+    padding: .5vh;
+    border-left: 0.1vw dashed white;
+    width: 80%;
     flex-direction: column;
-    justify-content: stretch;
+    justify-content: flex-start;
     align-items: stretch;
 }
 .item-name
 {
     font-weight: 900;
-    font-size: larger;
-    padding: 0.2em;
+    font-size: 2vh;
+    padding: 0.2vh;
     flex: 1;
-    border-bottom: 1px dashed white;
+    border-bottom: .05vw dashed white;
 }
 .item-desc
 {
@@ -261,42 +264,42 @@ img
 }
 .item-price
 {
-    border-top: 1px dashed white;
+    border-top: .05vw dashed white;
     font-weight: bolder;
     flex: 1;
     text-align: end;
+    padding: 1vh 0vh 0vh 0vh;
 }
 #tab3
 {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     padding: 10vh 10vw;
     gap: 3vw;
 }
 .tab3-div
 {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: rgb(146, 103, 37);
     gap: 10%;
     padding: 1%;
     color: black;
     text-align: center;
     white-space: pre;
-    border: 10px solid #421616;
-    border-radius: 0.5em;
+    border: 1vh solid #421616;
+    border-radius: 3%;
 }
 .title
 {
     text-align: center;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 4vh;
 }
 .text
 {
-    font-size: 1.5em;
+    font-size: 3vh;
 }
