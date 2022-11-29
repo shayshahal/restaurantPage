@@ -16,7 +16,7 @@ export default function loadTab(tab)
      tab.appendChild(hoursDiv);
 
      const hoursTitle = document.createElement('p');
-     hoursTitle.textContent = "Opening hours:";
+     hoursTitle.textContent = "\u23F1\nOpening hours:";
      hoursTitle.classList.add('title');
      hoursDiv.appendChild(hoursTitle);
 
@@ -30,7 +30,7 @@ export default function loadTab(tab)
      tab.appendChild(contactDiv);
 
      const contactTitle = document.createElement('p');
-     contactTitle.textContent = "Call us:";
+     contactTitle.textContent = "\u260E \nCall us:";
      contactTitle.classList.add('title');
      contactDiv.appendChild(contactTitle);
 
