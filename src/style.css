@@ -28,7 +28,9 @@ body
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    transition: background-image 0.8s ease;
 }
+
 #header
 {
     position: fixed;
@@ -44,6 +46,7 @@ body
     box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
+
 #logo
 {
     opacity: 50%;
@@ -54,9 +57,7 @@ body
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: stretch;
-    flex-grow: 15;
+    justify-content: center;
 }
 #scroll-div
 {
@@ -70,32 +71,60 @@ body
 @keyframes flicker {
     0%
     {
-        transform: translateY(0%);
+        transform: translateY(-7.5%);
     }
     100%
     {
-        transform: translateY(15%);
+        transform: translateY(7.5%);
     }
+}
+#radio-div
+{
+    position: fixed;
+    right: 1%;
+    bottom: calc(50% - 0.5*(7vh));
+    height: 7vh;
+    width: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.5vh;
+}
+input
+{
+    appearance: none;
+    border-radius: 50%;
+    background-color: transparent;
+    flex-grow: 1;
+    border: 2px solid rgb(255, 255, 255);
+    transition: background-color .2s ease;
+}
+input:checked
+{
+    background-color: white;
 }
 .tab
 {
-    flex-grow: 5;
-    animation: 0.5s;
+    flex: 1;
+    animation: .2s;
     animation-direction: normal;
     animation-name: slideIn;
-    animation-timing-function: ease-out ; 
+    animation-timing-function: ease ; 
     animation-iteration-count: inherit;
 }
+
 @keyframes slideIn {
     0%
     {
-        transform: translateY(-50%);
+        transform: scale(80%) ;
     }
     100%
     {
-        transform: translateY(0%);
+        transform: scale(100%);
     }
 }
+
 #footer
 {
     position: fixed;
@@ -158,6 +187,7 @@ img
 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 1em;
     gap: 1em;
@@ -172,15 +202,16 @@ img
 }
 .menu-list
 {
+    height: 80%;
+    width: 70%;
     display: flex;
-    background-color: rgb(163, 128, 59);
+    background-color: rgb(53, 32, 0);
     color: black;
     flex-direction: column;
     align-items: stretch;
-    flex-wrap: wrap;
-    gap: 1.5em;
-    padding: 1.5em;
-    border: 2px solid white;
+    gap: 1em;
+    padding: 0.5em;
+    border: 10px solid #360606;
     border-radius: 1em;
 }
 .menu-item
@@ -191,23 +222,57 @@ img
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 1em;
-    padding: 1em;
+    padding: 0.3em;
 }
 .item-image-div
 {
     height: 100%;
+    border-radius: 50%;
+    border: 7px solid #834e23;
 }
 .item-words
 {
     display: flex;
+    flex: 1;
+    gap: 0.5em;
     flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
 }
 .item-name
 {
-    font-weight: bold;
+    font-weight: 900;
+    font-size: larger;
+    padding: 0.2em;
+    flex: 1;
+    border-bottom: 1px dashed white;
 }
 .item-desc
 {
     word-wrap: break-word;
+    flex: 5;
+}
+.item-price
+{
+    border-top: 1px dashed white;
+    font-weight: bolder;
+    flex: 1;
+    text-align: end;
+}
+#tab3
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+}
+#hours-div
+{
+    flex: 1;
+}
+#contact-div
+{
+    flex: 1;
 }

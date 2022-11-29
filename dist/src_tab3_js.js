@@ -11,16 +11,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ loadTab)
 /* harmony export */ });
-/* harmony import */ var _assets_Pizza_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/Pizza.jpg */ "./src/assets/Pizza.jpg");
+/* harmony import */ var _assets_pizza3_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/pizza3.jpg */ "./src/assets/pizza3.jpg");
 
 
 function loadTab(tab)
 {
-     // Change background for tab
-     const content = document.getElementById("content");
-     content.style.backgroundImage = `url(${_assets_Pizza_jpg__WEBPACK_IMPORTED_MODULE_0__})`;
- 
      // Create blur for background
+     content.style.backgroundImage = `url(${_assets_pizza3_jpg__WEBPACK_IMPORTED_MODULE_0__})`;
      const main = document.getElementById("main-container");
      main.style.backdropFilter = 'blur(7px)';
 
@@ -28,28 +25,40 @@ function loadTab(tab)
      tab.id = "tab3";
      tab.classList.add('tab');
  
-     // Create Welcome message!
-     const welcome = document.createElement('div');
-     welcome.textContent = 'Welcome to Papa Pizza';
-     welcome.id = 'welcome';
-     tab.appendChild(welcome);
-     const papa = document.createElement('div');
-     papa.textContent = 'The Pizza of Papa';
-     papa.id = 'papa';
-     tab.appendChild(papa);
+     const hoursDiv = document.createElement('div');
+     hoursDiv.id = 'hours-div';
+     tab.appendChild(hoursDiv);
+
+     const hoursTitle = document.createElement('div');
+     hoursTitle.textContent = "Opening hours";
+     hoursDiv.appendChild(hoursTitle);
+
+     const hoursText = document.createElement('p');
+     hoursText.textContent = 'Sunday - Thursday: 8:00 - 17:00\nFriday: 8:00 - 13:00';
+     hoursTitle.appendChild(hoursText);
+
+     const contactDiv = document.createElement('div');
+     contactDiv.id = 'contact-div';
+     tab.appendChild(contactDiv);
+
+     const contactTitle = document.createElement('div');
+     contactTitle.textContent = "Opening hours";
+     contactDiv.appendChild(contactTitle);
+
+     
 }
 
 /***/ }),
 
-/***/ "./src/assets/Pizza.jpg":
-/*!******************************!*\
-  !*** ./src/assets/Pizza.jpg ***!
-  \******************************/
+/***/ "./src/assets/pizza3.jpg":
+/*!*******************************!*\
+  !*** ./src/assets/pizza3.jpg ***!
+  \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "d8ba615d52e110714e4e.jpg";
+module.exports = __webpack_require__.p + "10574d5e9082c62abd0d.jpg";
 
 /***/ })
 
 }]);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3JjX3RhYjNfanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7QUFBb0M7O0FBRXJCO0FBQ2Y7QUFDQTtBQUNBO0FBQ0EsNENBQTRDLDhDQUFFLENBQUM7QUFDL0M7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL3Jlc3RhdXJhbnRwYWdlLy4vc3JjL3RhYjMuanMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGJnIGZyb20gJy4vYXNzZXRzL1BpenphLmpwZyc7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIGxvYWRUYWIodGFiKVxue1xuICAgICAvLyBDaGFuZ2UgYmFja2dyb3VuZCBmb3IgdGFiXG4gICAgIGNvbnN0IGNvbnRlbnQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImNvbnRlbnRcIik7XG4gICAgIGNvbnRlbnQuc3R5bGUuYmFja2dyb3VuZEltYWdlID0gYHVybCgke2JnfSlgO1xuIFxuICAgICAvLyBDcmVhdGUgYmx1ciBmb3IgYmFja2dyb3VuZFxuICAgICBjb25zdCBtYWluID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJtYWluLWNvbnRhaW5lclwiKTtcbiAgICAgbWFpbi5zdHlsZS5iYWNrZHJvcEZpbHRlciA9ICdibHVyKDdweCknO1xuXG4gICAgIC8vIFRhYiBhdHRyaWJ1dGVzXG4gICAgIHRhYi5pZCA9IFwidGFiM1wiO1xuICAgICB0YWIuY2xhc3NMaXN0LmFkZCgndGFiJyk7XG4gXG4gICAgIC8vIENyZWF0ZSBXZWxjb21lIG1lc3NhZ2UhXG4gICAgIGNvbnN0IHdlbGNvbWUgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcbiAgICAgd2VsY29tZS50ZXh0Q29udGVudCA9ICdXZWxjb21lIHRvIFBhcGEgUGl6emEnO1xuICAgICB3ZWxjb21lLmlkID0gJ3dlbGNvbWUnO1xuICAgICB0YWIuYXBwZW5kQ2hpbGQod2VsY29tZSk7XG4gICAgIGNvbnN0IHBhcGEgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTtcbiAgICAgcGFwYS50ZXh0Q29udGVudCA9ICdUaGUgUGl6emEgb2YgUGFwYSc7XG4gICAgIHBhcGEuaWQgPSAncGFwYSc7XG4gICAgIHRhYi5hcHBlbmRDaGlsZChwYXBhKTtcbn0iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3JjX3RhYjNfanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7QUFBcUM7O0FBRXRCO0FBQ2Y7QUFDQTtBQUNBLDRDQUE0QywrQ0FBRSxDQUFDO0FBQy9DO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9yZXN0YXVyYW50cGFnZS8uL3NyYy90YWIzLmpzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBiZyBmcm9tICcuL2Fzc2V0cy9waXp6YTMuanBnJztcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gbG9hZFRhYih0YWIpXG57XG4gICAgIC8vIENyZWF0ZSBibHVyIGZvciBiYWNrZ3JvdW5kXG4gICAgIGNvbnRlbnQuc3R5bGUuYmFja2dyb3VuZEltYWdlID0gYHVybCgke2JnfSlgO1xuICAgICBjb25zdCBtYWluID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJtYWluLWNvbnRhaW5lclwiKTtcbiAgICAgbWFpbi5zdHlsZS5iYWNrZHJvcEZpbHRlciA9ICdibHVyKDdweCknO1xuXG4gICAgIC8vIFRhYiBhdHRyaWJ1dGVzXG4gICAgIHRhYi5pZCA9IFwidGFiM1wiO1xuICAgICB0YWIuY2xhc3NMaXN0LmFkZCgndGFiJyk7XG4gXG4gICAgIGNvbnN0IGhvdXJzRGl2ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7XG4gICAgIGhvdXJzRGl2LmlkID0gJ2hvdXJzLWRpdic7XG4gICAgIHRhYi5hcHBlbmRDaGlsZChob3Vyc0Rpdik7XG5cbiAgICAgY29uc3QgaG91cnNUaXRsZSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpO1xuICAgICBob3Vyc1RpdGxlLnRleHRDb250ZW50ID0gXCJPcGVuaW5nIGhvdXJzXCI7XG4gICAgIGhvdXJzRGl2LmFwcGVuZENoaWxkKGhvdXJzVGl0bGUpO1xuXG4gICAgIGNvbnN0IGhvdXJzVGV4dCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3AnKTtcbiAgICAgaG91cnNUZXh0LnRleHRDb250ZW50ID0gJ1N1bmRheSAtIFRodXJzZGF5OiA4OjAwIC0gMTc6MDBcXG5GcmlkYXk6IDg6MDAgLSAxMzowMCc7XG4gICAgIGhvdXJzVGl0bGUuYXBwZW5kQ2hpbGQoaG91cnNUZXh0KTtcblxuICAgICBjb25zdCBjb250YWN0RGl2ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7XG4gICAgIGNvbnRhY3REaXYuaWQgPSAnY29udGFjdC1kaXYnO1xuICAgICB0YWIuYXBwZW5kQ2hpbGQoY29udGFjdERpdik7XG5cbiAgICAgY29uc3QgY29udGFjdFRpdGxlID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7XG4gICAgIGNvbnRhY3RUaXRsZS50ZXh0Q29udGVudCA9IFwiT3BlbmluZyBob3Vyc1wiO1xuICAgICBjb250YWN0RGl2LmFwcGVuZENoaWxkKGNvbnRhY3RUaXRsZSk7XG5cbiAgICAgXG59Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9

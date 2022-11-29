@@ -1,12 +1,9 @@
-import bg from './assets/Pizza.jpg';
+import bg from './assets/pizza3.jpg';
 
 export default function loadTab(tab)
 {
-     // Change background for tab
-     const content = document.getElementById("content");
-     content.style.backgroundImage = `url(${bg})`;
- 
      // Create blur for background
+     content.style.backgroundImage = `url(${bg})`;
      const main = document.getElementById("main-container");
      main.style.backdropFilter = 'blur(7px)';
 
@@ -14,13 +11,25 @@ export default function loadTab(tab)
      tab.id = "tab3";
      tab.classList.add('tab');
  
-     // Create Welcome message!
-     const welcome = document.createElement('div');
-     welcome.textContent = 'Welcome to Papa Pizza';
-     welcome.id = 'welcome';
-     tab.appendChild(welcome);
-     const papa = document.createElement('div');
-     papa.textContent = 'The Pizza of Papa';
-     papa.id = 'papa';
-     tab.appendChild(papa);
+     const hoursDiv = document.createElement('div');
+     hoursDiv.id = 'hours-div';
+     tab.appendChild(hoursDiv);
+
+     const hoursTitle = document.createElement('div');
+     hoursTitle.textContent = "Opening hours";
+     hoursDiv.appendChild(hoursTitle);
+
+     const hoursText = document.createElement('p');
+     hoursText.textContent = 'Sunday - Thursday: 8:00 - 17:00\nFriday: 8:00 - 13:00';
+     hoursTitle.appendChild(hoursText);
+
+     const contactDiv = document.createElement('div');
+     contactDiv.id = 'contact-div';
+     tab.appendChild(contactDiv);
+
+     const contactTitle = document.createElement('div');
+     contactTitle.textContent = "Opening hours";
+     contactDiv.appendChild(contactTitle);
+
+     
 }

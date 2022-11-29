@@ -21,6 +21,18 @@ export default function loadPage()
     scrollDiv.appendChild(img);
     scrollDiv.id = 'scroll-div';
     contentDiv.appendChild(scrollDiv);
+
+    const radioDiv = document.createElement("div");
+    radioDiv.id = 'radio-div';
+    contentDiv.appendChild(radioDiv);
+    for (let i = 0; i < 3; i++) {
+        const radio = document.createElement('input');
+        radio.type = 'radio';
+        if (i === 0)
+            radio.checked = true;
+        radio.disabled = true;
+        radioDiv.appendChild(radio);
+    }
 }
 
 // Header creation function 
