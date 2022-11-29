@@ -1,5 +1,5 @@
 import bg from './assets/Pizza.jpg';
-
+import logo from './assets/papa.png';
 
 export default function loadTab(tab)
 {
@@ -21,5 +21,8 @@ export default function loadTab(tab)
     const papa = document.createElement('div');
     papa.textContent = 'The Pizza of Papa';
     papa.id = 'papa';
+    const img = new Image();
+    img.src = logo;
+    papa.appendChild(img);
     tab.appendChild(papa);
 }

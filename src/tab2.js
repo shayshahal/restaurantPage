@@ -1,5 +1,7 @@
 import bg from './assets/pizza2.jpg';
 import italian from './assets/italian.jpg';
+import ny from './assets/new-yorker2.jpg';
+import mx from './assets/mex.jpg';
 
 export default function loadTab(tab)
 {
@@ -19,12 +21,12 @@ export default function loadTab(tab)
     // Create Menu title!
     const title = document.createElement('p');
     title.textContent = 'Menu:';
-    title.id = 'menu';
+    title.classList.add('title');
     list.appendChild(title);
 
-    addItem(list, italian, "Italian", "An italiano pizza", 10);
-    addItem(list, italian, "Italian", "An italiano pizza", 20);
-    addItem(list, italian, "Italian", "An italiano pizza", 30);
+    addItem(list, italian, "Italian:", "An italiano pizza", 10);
+    addItem(list, mx, "Mexican:", "A Mexicano pizza", 20);
+    addItem(list, ny, "New-Yorker:", "A New-Yorker pizza", 30);
 }
 
 function addItem(list, imageSrc, title, text, prc)
@@ -37,9 +39,7 @@ function addItem(list, imageSrc, title, text, prc)
     itemImgDiv.classList.add("item-image-div");
     menuItem.appendChild(itemImgDiv);
 
-    const itemImg = new Image();
-    itemImg.src = imageSrc;
-    itemImgDiv.appendChild(itemImg);
+    itemImgDiv.style.backgroundImage = `url(${imageSrc})`;
 
     const wordsDiv = document.createElement("div");
     wordsDiv.classList.add('item-words');
